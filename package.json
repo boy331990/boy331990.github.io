@@ -5,14 +5,13 @@
 	"main": "index.js",
 	"author": "dongwook",
 	"license": "MIT",
-	
 	"scripts": {
 		"start": "next start",
 		"build": "next build && next export",
 		"dev": "next dev",
 		"lint": "next lint",
-		"predeploy": "npm run build && touch out/.nojekyll",
-		"deploy": "gh-pages -d out"
+		"predeploy": "yarn build && touch out/.nojekyll",
+		"deploy": "gh-pages -d out -t true"
 	},
 	"dependencies": {
 		"@apollo/client": "^3.3.21",
