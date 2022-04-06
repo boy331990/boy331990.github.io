@@ -35,12 +35,13 @@ const ExperienceCard = ({ data }) => {
 							className="bg-white rounded-circle mb-3 img-center img-fluid shadow-lg "
 							style={{ width: "100px", height: "100px" }}
 						>
-							<Image
+							{/* <Image
 								src={data.companylogo}
 								width={"100px"}
 								height={"100px"}
 								alt={data.companylogo}
-							/>
+							/> */}
+							<img src={data.companylogo} width="100px" height="100px" alt="data.companylogo" />
 						</div>
 						<CardTitle tag="h5">{data.role}</CardTitle>
 						<CardSubtitle>{data.date}</CardSubtitle>
