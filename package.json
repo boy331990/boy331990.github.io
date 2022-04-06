@@ -6,7 +6,6 @@
 	"repository": "https://github.com/1hanzla100/hanzla-portfolio.git",
 	"author": "Hanzla Tauqeer",
 	"license": "MIT",
-	"homepage": "http://boy331990.github.io/portfolio",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build && next export",
