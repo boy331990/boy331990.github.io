@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"author": "dongwook",
 	"license": "MIT",
+	
 	"scripts": {
 		"start": "next start",
 		"build": "next build && next export",
