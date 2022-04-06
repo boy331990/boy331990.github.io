@@ -6,13 +6,13 @@
 	"repository": "https://github.com/1hanzla100/hanzla-portfolio.git",
 	"author": "Hanzla Tauqeer",
 	"license": "MIT",
+	"homepage": "http://boy331990.github.io",
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
-		"export": "next export",
+		"build": "next build && next export",
 		"start": "next start",
 		"lint": "next lint",
-		"deploy": "next build && next export && touch out/.nojekyll && git add -f out/ && git commit -m 'deploy to gh-pages' && git push -u origin master"
+		"deploy": "npm run build && touch out/.nojekyll"
 	},
 	"dependencies": {
 		"@apollo/client": "^3.3.21",
