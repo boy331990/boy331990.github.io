@@ -1,15 +1,14 @@
 {
-	"name": "developer-portfolio",
+	"homepage": "http://boy331990.github.io/portfolio",
+	"name": "dongwook-portfolio",
 	"version": "1.0.0",
-	"description": "Software Developer Portfolio Template built with react.js bootstrap that helps you showcase your work and skills as a software developer.",
 	"main": "index.js",
-	"repository": "https://github.com/1hanzla100/hanzla-portfolio.git",
-	"author": "Hanzla Tauqeer",
+	"author": "dongwook",
 	"license": "MIT",
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build && next export",
 		"start": "next start",
+		"build": "next build && next export",
+		"dev": "next dev",
 		"lint": "next lint",
 		"deploy": "npm run build && touch out/.nojekyll"
 	},
