@@ -1,6 +1,13 @@
+const withImages = require('next-images')
+module.exports = withImages({
+  webpack(config, options) {
+    return config
+  }
+})
+
 module.exports = {
 	reactStrictMode: false,
 	images: {
-		domains: ["https://boy331990.github.io/"],
+		domains: ["avatars.githubusercontent.com"],
 	}
 };
