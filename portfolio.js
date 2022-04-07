@@ -4,7 +4,7 @@ export const greetings = {
 	name: "Dongwook Shin",
 	title: "안녕하세요. 신동욱입니다.",
 	description:
-		"화성 갈끄니까!!!",
+		"화성 갈끄니까!!!테스트트트틑",
 		//"A passionate Full Stack Web Developer and Mobile App Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs / Python / Django / Flask and some other cool libraries and frameworks and Cross Platform Mobile Apps With Flutter.",
 	resumeLink: "https://cv.hanzla.ga",
 };
