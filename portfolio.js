@@ -2,10 +2,9 @@ import emoji from "react-easy-emoji";
 
 export const greetings = {
 	name: "Dongwook Shin",
-	title: "안녕하세요. 신동욱입니다.",
+	title: "안녕하세요. 신동욱입니다. 🖐",
 	description:
-		"화성 갈끄니까!!!테스트트트틑"
-		//"A passionate Full Stack Web Developer and Mobile App Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs / Python / Django / Flask and some other cool libraries and frameworks and Cross Platform Mobile Apps With Flutter.",
+		"풀스택 개발자를 꿈꾸고 있으며, Java / Spring / Spring Boot / Javascript / Reactjs / Mysql / MariaDB / Oracle과 같은 언어, 프레임워크 등을 다룰 수 있으며, 다양한 라이브러리를 경험했습니다."
 };
 
 export const openSource = {
@@ -15,26 +14,34 @@ export const openSource = {
 export const contact = {};
 
 export const socialLinks = {
-	github: "https://github.com/1hanzla100"
+	github: "https://github.com/boy331990"
 };
 
 export const skillsSection = {
-	title: "What I do",
+	title: "보유 기술",
 	subTitle:
-		"CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+		"다방면에 활용 가능한 풀스택 개발자",
 	skills: [
 		emoji(
-			"⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+			"⚡ Spring, Spring Boot, 전자정부 프레임워크 기반 웹 어플리케이션 개발에 특화"
 		),
 		emoji(
-			"⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"
+			"⚡ Backend뿐만 아니라 Frontend 프레임워크, 라이브러리를 통한 웹 어플리케이션 개발 가능"
 		),
 		emoji(
-			"⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+			"⚡ AWS 서비스 및 IoT 개발과 같은 차별화된 능력 및 경험 보유"
 		),
 	],
 
 	softwareSkills: [
+		{
+			skillName: "java",
+			fontAwesomeClassname: "logos:java",
+		},
+		{
+			skillName: "spring",
+			fontAwesomeClassname: "logos:spring-icon",
+		},
 		{
 			skillName: "html-5",
 			fontAwesomeClassname: "vscode-icons:file-type-html",
@@ -44,16 +51,8 @@ export const skillsSection = {
 			fontAwesomeClassname: "vscode-icons:file-type-css",
 		},
 		{
-			skillName: "sass",
-			fontAwesomeClassname: "logos:sass",
-		},
-		{
 			skillName: "JavaScript",
 			fontAwesomeClassname: "logos:javascript",
-		},
-		{
-			skillName: "TypeScript",
-			fontAwesomeClassname: "logos:typescript-icon",
 		},
 		{
 			skillName: "reactjs",
@@ -64,14 +63,6 @@ export const skillsSection = {
 			fontAwesomeClassname: "logos:nodejs-icon",
 		},
 		{
-			skillName: "flutter",
-			fontAwesomeClassname: "logos:flutter",
-		},
-		{
-			skillName: "swift",
-			fontAwesomeClassname: "vscode-icons:file-type-swift",
-		},
-		{
 			skillName: "npm",
 			fontAwesomeClassname: "vscode-icons:file-type-npm",
 		},
@@ -80,16 +71,8 @@ export const skillsSection = {
 			fontAwesomeClassname: "vscode-icons:file-type-sql",
 		},
 		{
-			skillName: "mongoDB",
-			fontAwesomeClassname: "vscode-icons:file-type-mongo",
-		},
-		{
 			skillName: "aws",
 			fontAwesomeClassname: "logos:aws",
-		},
-		{
-			skillName: "firebase",
-			fontAwesomeClassname: "logos:firebase",
 		},
 		{
 			skillName: "python",
@@ -98,10 +81,6 @@ export const skillsSection = {
 		{
 			skillName: "git",
 			fontAwesomeClassname: "logos:git-icon",
-		},
-		{
-			skillName: "docker",
-			fontAwesomeClassname: "logos:docker-icon",
 		},
 	],
 };
