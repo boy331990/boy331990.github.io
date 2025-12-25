@@ -21,6 +21,41 @@ export const skillsSection = {
 	title: "보유 기술",
 	subTitle:
 		"다방면에 활용 가능한 풀스택 개발자",
+	mindmap: {
+		core: "풀스택 개발",
+		nodes: [
+			{
+				title: "Backend",
+				items: ["Java", "Spring Boot", "REST API"],
+				position: "top-left",
+			},
+			{
+				title: "Frontend",
+				items: ["React", "Next.js", "UX"],
+				position: "top-right",
+			},
+			{
+				title: "Data",
+				items: ["MySQL", "Oracle", "SQL 튜닝"],
+				position: "right",
+			},
+			{
+				title: "DevOps",
+				items: ["CI/CD", "Docker", "모니터링"],
+				position: "bottom-right",
+			},
+			{
+				title: "Cloud/IoT",
+				items: ["AWS", "IoT 연동", "서버리스"],
+				position: "bottom-left",
+			},
+			{
+				title: "협업",
+				items: ["Git", "코드리뷰", "문서화"],
+				position: "left",
+			},
+		],
+	},
 	skills: [
 		emoji(
 			"⚡ Spring, Spring Boot, 전자정부 프레임워크 기반 웹 어플리케이션 개발에 특화"

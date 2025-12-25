@@ -6,6 +6,14 @@ import DisplayLottie from "../components/DisplayLottie";
 import { skillsSection } from "../portfolio";
 
 const Skills = () => {
+	const mindmapLinePositions = {
+		"top-left": { x: 22, y: 20 },
+		"top-right": { x: 78, y: 20 },
+		right: { x: 90, y: 50 },
+		"bottom-right": { x: 78, y: 80 },
+		"bottom-left": { x: 22, y: 80 },
+		left: { x: 10, y: 50 },
+	};
 	return (
 		<Fade bottom duration={1000} distance="40px">
 			<Container className="text-center my-5 section section-lg">
@@ -49,6 +57,47 @@ const Skills = () => {
 						</div>
 					</Col>
 				</Row>
+				{skillsSection.mindmap && (
+					<div className="skills-mindmap">
+						<svg
+							className="skills-mindmap__lines"
+							viewBox="0 0 100 100"
+							preserveAspectRatio="none"
+							aria-hidden="true"
+						>
+							{skillsSection.mindmap.nodes.map((node) => {
+								const linePosition =
+									mindmapLinePositions[node.position] ||
+									mindmapLinePositions["top-left"];
+								return (
+									<line
+										key={`line-${node.title}`}
+										x1="50"
+										y1="50"
+										x2={linePosition.x}
+										y2={linePosition.y}
+									/>
+								);
+							})}
+						</svg>
+						<div className="skills-mindmap__core">
+							<span>{skillsSection.mindmap.core}</span>
+						</div>
+						{skillsSection.mindmap.nodes.map((node) => (
+							<div
+								key={node.title}
+								className={`skills-mindmap__node skills-mindmap__node--${node.position}`}
+							>
+								<h3>{node.title}</h3>
+								<ul>
+									{node.items.map((item) => (
+										<li key={item}>{item}</li>
+									))}
+								</ul>
+							</div>
+						))}
+					</div>
+				)}
 			</Container>
 		</Fade>
 	);
