@@ -7,10 +7,10 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "next start",
-		"build": "next build && next export",
-		"dev": "next dev",
+                "build": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
+                "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
 		"lint": "next lint",
-		"predeploy": "yarn build && touch out/.nojekyll",
+		"predeploy": "npm run build && touch out/.nojekyll",
 		"deploy": "gh-pages -d out -t true"
 	},
 	"dependencies": {
