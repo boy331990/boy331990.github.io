@@ -46,9 +46,9 @@
 - 개발 서버 실행: `npm run dev`
 - 린트 실행: `npm run lint`
 - 프로덕션 빌드 + 정적 export: `npm run build`
-- GitHub Pages 배포용 산출물 준비: `npm run build` 또는 `npm run predeploy`
-- GitHub Pages 배포 실행: `npm run deploy`
-- `npm run deploy`는 `package.json`의 `predeploy`를 먼저 실행하므로, 빌드와 `.nojekyll` 생성까지 자동으로 이어집니다.
+- GitHub Pages 배포용 산출물 준비: `npm run build` 또는 `npm run pages:build`
+- GitHub Pages 배포 실행: GitHub Actions 워크플로우(`.github/workflows/deploy-pages.yml`)가 `master` 푸시 시 자동 수행합니다.
+- 로컬에서는 `npm run pages:build`로 GitHub Pages용 정적 산출물과 `.nojekyll`을 함께 준비합니다.
 
 ## 작업 절차
 - 기능/문구 수정 전 관련 데이터 파일과 렌더링 컴포넌트를 함께 확인합니다.
@@ -63,7 +63,7 @@
 - 문구 수정 요청: "어느 섹션의 어떤 문구를 무엇으로 바꿀지"를 함께 적습니다.
 - UI 수정 요청: "대상 섹션", "원하는 변화", "참고 스타일"을 함께 적습니다.
 - 데이터 수정 요청: "수정 파일", "추가/변경/삭제 항목", "실제 값"을 함께 적습니다.
-- 배포 요청: "`npm` 기준인지 `yarn` 기준인지", "배포까지만 할지 빌드 검증도 할지"를 함께 적습니다.
+- 배포 요청: "`npm` 기준인지 `yarn` 기준인지", "GitHub Actions 자동 배포 점검까지 볼지"를 함께 적습니다.
 - 리뷰 요청: "버그 중심", "구조 중심", "배포 위험 중심" 중 무엇을 중점으로 볼지 적습니다.
 
 ## 요청 예시
@@ -81,9 +81,8 @@
 - 사용하지 않는 컴포넌트, 중복 렌더링, 오타성 속성 선언을 확인합니다.
 
 ## 배포 메모
-- `package.json` 기준 `predeploy`는 `npm run build && touch out/.nojekyll` 입니다.
-- `predeploy`를 거치지 않고 수동으로 배포할 경우에는 `npm run build` 후 `touch out/.nojekyll` 를 별도로 실행합니다.
-- `npm run deploy` 실행 시 최종적으로 `gh-pages -d out -t true`를 실행합니다.
+- `package.json` 기준 `pages:build`는 `npm run build && touch out/.nojekyll` 입니다.
+- GitHub Pages 배포는 `.github/workflows/deploy-pages.yml`에서 `npm ci`, `npm run pages:build`, Pages artifact 업로드 순서로 진행합니다.
 - - `build` 스크립트는 `next build && next export`입니다.
 - GitHub Pages 관련 작업에서는 `homepage` 값과 정적 자산 경로 영향 여부를 함께 확인합니다.
 - 배포 산출물은 `out/` 아래 생성됩니다.
