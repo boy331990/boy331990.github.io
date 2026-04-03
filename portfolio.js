@@ -27,39 +27,52 @@ export const socialLinks = {
 
 export const skillsSection = {
         title: "Core Strengths",
-        subTitle: "기능 구현보다 오래 버티는 구조를 먼저 고민합니다.",
+        subTitle: "이력서 기반으로 실제 수행한 기술 스택을 정리했습니다.",
         mindmap: {
                 core: "Stable Backend Engineering",
+                coreId: "all",
                 nodes: [
                         {
+                                id: "architecture",
                                 title: "Stability",
                                 items: ["대규모 트래픽 대응", "장애 감지 체계", "무중단 전환"],
                                 position: "top-left",
+                                relatedSkills: ["java", "spring-boot", "mysql", "postgresql"],
                         },
                         {
+                                id: "backend",
                                 title: "Backend",
                                 items: ["Java", "Spring Boot", "REST API 설계"],
                                 position: "top-right",
+                                relatedSkills: ["java", "spring-boot", "javascript", "typescript"],
                         },
                         {
+                                id: "data",
                                 title: "Data",
                                 items: ["Oracle", "MySQL", "PostgreSQL"],
                                 position: "right",
+                                relatedSkills: ["oracle", "mysql", "postgresql"],
                         },
                         {
+                                id: "delivery",
                                 title: "Delivery",
                                 items: ["Jenkins", "Docker", "Kubernetes"],
                                 position: "bottom-right",
+                                relatedSkills: ["jenkins", "docker", "kubernetes", "git"],
                         },
                         {
+                                id: "aws",
                                 title: "Cloud & IoT",
-                                items: ["AWS", "EKS", "ActiveMQ"],
+                                items: ["AWS", "EKS", "ActiveMQ", "Kubernetes", "Docker"],
                                 position: "bottom-left",
+                                relatedSkills: ["aws", "kubernetes", "docker", "java", "spring-boot"],
                         },
                         {
+                                id: "collaboration",
                                 title: "Collaboration",
                                 items: ["Swagger", "Git 전략", "운영 커뮤니케이션"],
                                 position: "left",
+                                relatedSkills: ["git", "javascript", "typescript", "react"],
                         },
                 ],
         },
@@ -92,6 +105,10 @@ export const skillsSection = {
                 {
                         skillName: "mysql",
                         fontAwesomeClassname: "logos:mysql",
+                },
+                {
+                        skillName: "oracle",
+                        fontAwesomeClassname: "logos:oracle",
                 },
                 {
                         skillName: "postgresql",
