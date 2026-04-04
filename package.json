@@ -7,10 +7,10 @@
         "license": "MIT",
         "scripts": {
                 "start": "next start",
-                "build": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
+                "build": "rm -rf docs && NODE_OPTIONS=--openssl-legacy-provider next build && next export -o docs",
                 "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
                 "lint": "next lint",
-                "pages:build": "npm run build && touch out/.nojekyll"
+                "pages:build": "npm run build && touch docs/.nojekyll"
         },
         "dependencies": {
                 "@apollo/client": "^3.3.21",
